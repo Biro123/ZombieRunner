@@ -5,29 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public GameObject playerSpawnPoints;
-    public Helicopter helicopter;
-    public AudioClip whatHappened;
 
     private bool respawnNow = false;
     private Transform[] spawnPoints;
-    private AudioSource innerVoice;
 
 	// Use this for initialization
 	void Start () {
-        spawnPoints = playerSpawnPoints.GetComponentsInChildren<Transform>();
-
-        AudioSource[] audioSources = GetComponents<AudioSource>();
-        foreach (AudioSource audioSource in audioSources)
-        {
-            if (audioSource.priority == 1)
-            {
-                innerVoice = audioSource;
-            }
-        }
-
-        innerVoice.clip = whatHappened;
-        innerVoice.Play();
-
+        spawnPoints = playerSpawnPoints.GetComponentsInChildren<Transform>();             
     }
 	
 	// Update is called once per frame
@@ -48,9 +32,12 @@ public class Player : MonoBehaviour {
 
     private void OnFindClearArea()
     {
-        Debug.Log("Found Clear Area in player");
-        helicopter.Call();
-        // Deploy Flare
-        // Start spawning zombies
+        Invoke("DropFlare", 3f);
+    }
+
+    void DropFlare()
+    {
+        // TODO Drop A Flare
+        Debug.Log("Dropping Flare");
     }
 }

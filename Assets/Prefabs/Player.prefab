@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114781283043643072}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +69,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1499726410135064
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -93,9 +93,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4720348334326274}
   m_Father: {fileID: 4407388078731730}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4407388078731730
 Transform:
@@ -104,11 +105,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1002452327783488}
   m_LocalRotation: {x: -0, y: 0.8323375, z: -0, w: 0.55426925}
-  m_LocalPosition: {x: 721, y: 80, z: 326.4}
+  m_LocalPosition: {x: 696.98, y: 80, z: 428.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4820699140253772}
-  - {fileID: 4720348334326274}
   - {fileID: 4206937997028526}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -119,12 +119,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1499726410135064}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
-  m_LocalScale: {x: 40, y: 1, z: 40}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4407388078731730}
-  m_RootOrder: 1
+  m_Father: {fileID: 4206937997028526}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4820699140253772
 Transform:
@@ -200,8 +200,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 40, y: 30, z: 40}
+  m_Center: {x: 0, y: 15.5, z: 0}
 --- !u!81 &81215845035778138
 AudioListener:
   m_ObjectHideFlags: 1
@@ -494,8 +494,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpawnPoints: {fileID: 0}
-  helicopter: {fileID: 0}
-  whatHappened: {fileID: 8300000, guid: 6f49368f721214fcc81fda6a7ccf9343, type: 3}
 --- !u!114 &114875198925344604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -507,6 +505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a2290b5bb0de9479e4546a3766ffb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whatHappened: {fileID: 8300000, guid: 6f49368f721214fcc81fda6a7ccf9343, type: 3}
+  goodLandingArea: {fileID: 8300000, guid: 0f00476efd1774d2587939e6bd1a6bb4, type: 3}
 --- !u!114 &114912388955128176
 MonoBehaviour:
   m_ObjectHideFlags: 1
