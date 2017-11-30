@@ -5,13 +5,14 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public GameObject playerSpawnPoints;
+    public GameObject landingArea;
 
     private bool respawnNow = false;
     private Transform[] spawnPoints;
 
 	// Use this for initialization
 	void Start () {
-        spawnPoints = playerSpawnPoints.GetComponentsInChildren<Transform>();             
+        spawnPoints = playerSpawnPoints.GetComponentsInChildren<Transform>();           
     }
 	
 	// Update is called once per frame
@@ -37,7 +38,7 @@ public class Player : MonoBehaviour {
 
     void DropFlare()
     {
-        // TODO Drop A Flare
         Debug.Log("Dropping Flare");
+        Instantiate(landingArea, transform.position, transform.rotation);
     }
 }
